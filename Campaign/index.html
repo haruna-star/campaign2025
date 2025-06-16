@@ -1,0 +1,253 @@
+<!-- ★注意点★ -->
+<!-- head:いち早く読み込ませるデータを入れておく -->
+<!-- head:GoogleフォントやフォントオーサムのLINKいれる -->
+ <!-- 画像はimg-fluidでFITする、当倍の設定は会社ごとにちがうので聞く(2倍がスタンダード)-->
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 検索してほしいワードでタイトルを決める -->
+    <title>Photo Campaign 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header Class="container container-camp">
+        <div class="container container-camp p-2 text-left">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">hananona.Photo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">hananona.Photo</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">イベント内容</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">応募方法</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">賞品紹介</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
+        </div>
+    </div>
+        </nav>
+   
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container container-camp pt-3 bg-White">
+                <img src="images/Rectangle 56.png" alt="" class="img-fluid d-none d-md-block">
+                <img src="images/Rectangle 56.png" alt="" class="img-fluid d-block d-md-none">
+            </div>
+            <!-- <div class="container container-camp text-center p-4 text-bg-danger"> -->
+                <!-- <div class="row">
+                    <div class="col">
+                        <a href="#flow"><img src="images/btn_about.png" alt="応募内容" class="img-fluid"></a>
+                    </div>
+                    <div class="col">
+                        <a href="#how"><img src="images/btn_howto.png" alt="応募方法" class="img-fluid"></a>
+                    </div>
+                    <div class="col">
+                        <a href="#item"><img src="images/btn_item.png" alt="商品紹介" class="img-fluid"></a>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+
+            <div class="text-center bg-White">
+            <h1>キャンペーン締切まで</h1>
+             </div>
+            <!-- <div Class="text-center" id="countdown">読み込み中</div> -->
+             <div class="fullscreen-center">
+                <div class="text-center" id="countdown">80日 12時間 18分 33秒</div>
+            </div>
+
+                    <script>
+                    const countdown = () => {
+                        const eventDate = new Date("2025-08-31T24:00:00");
+                        const now = new Date();
+                        const diff = eventDate - now;
+
+                        if (diff <= 0) {
+                        document.getElementById("countdown").innerHTML = "イベント開催中";
+                        return;
+                        }
+
+                        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                        const minutes = Math.floor((diff / 1000 / 60) % 60);
+                        const seconds = Math.floor((diff / 1000) % 60);
+
+                        document.getElementById("countdown").innerHTML =
+                        `${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`;
+                    };
+
+                    countdown(); // 最初に1回
+                    setInterval(countdown, 1000); // 毎秒更新✨
+                    </script>
+
+            <div class="container container-camp p-5 bg-white">
+                <div class="text-center">
+                    <p><img src="images/Campaign_title.png" alt="" class="img-fluid"></p>
+                </div>
+                <div class="container container-camp">
+                    <img src="images/Campaign-img.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        <section id="flow">
+            <div class="container container-camp text-center bg-white">
+                <h2 class="text-center">内容</h2>
+                <p>あなたが見つけた『日本の夏の魅力』を<br>1枚の写真に。</p>
+                <p>風景・文化・人・食・旅先の感動・・・<br>今年の夏、心が動いた瞬間をカメラで切り取り、<br>投稿して下さい。<br>最優秀作品には、<br>冬に楽しむ〝特別なフォト旅〟をプレゼントします。</p>
+                    <!-- <ol>
+                        <li>キャンペーン期間中に、日本タルト協会Twittet公式アカウント「@---------」をフォロー</li>
+                        <li>ハッシュタグ「#タルトの日」を付けてあなたの好きなタルトを投稿して応募完了</li>
+                        <li>抽選で100名様にタルトの詰め合わせをプレゼント</li>
+                    </ol> -->
+                <h2 class="text-center">応募締切</h2>
+                <p class="text-center fs-3">2025年8月31日23時59分</p>
+                <!-- <div class="row py-5">
+                    <div class="col">
+                        <a href="#flow"><img src="images/Campaign-img2.png" alt="応募内容" class="img-fluid"></a>
+                    </div>
+                    <div class="col">
+                        <a href="#how"><img src="images/Campaign-img3.png" alt="応募方法" class="img-fluid"></a>
+                    </div>
+                    <div class="col">
+                        <a href="#item"><img src="images/Campain-img4.png" alt="商品紹介" class="img-fluid"></a>
+                    </div>
+                </div> -->
+        </section>
+
+        <section id="how">
+            <!-- SEO対策:画像内にある文言は検索ワードにヒットしないから、文字と画像情報はわけるほうがユーザーは使いやすい。 -->
+            <div class="container container-camp p-5 text-center bg-white">
+                <!-- <img src="images/How to Entry-titleyoko.png" alt="ロゴ横"> -->
+                <img src="images/How to Enter_title.png" alt="タイトル">
+
+                <!-- <h2 class="pb-5">応募方法</h2> -->
+                <div class="row g-3">
+                    <div class="col-sm-12 col-md-4 d-flex">
+                        <!-- <img src="images/stepbox_01.png" alt="" class="img-fluid rounded-4 p-3 bg-white"> -->
+                        <div class="rounded-4 p-4 bg-white">
+                            <img src="images/85.png" alt="フォロー" class="img-fluid">
+                            <p class="text-start">Instagramで<br>「Hananona.Photo」を<br>フォローする</p>
+                            <!-- <button tupe="button" class="btn btn-info btn-lg">投稿する</button> -->
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 d-flex">
+                        <!-- <img src="images/stepbox_02.png" alt="" class="img-fluid rounded-4 p-3 bg-white"> -->
+                        <div class="rounded-4 p-4 bg-white">
+                            <img src="images/86.png" alt="ツイート" class="img-fluid">
+                            <p class="text-start">ハッシュタグ<br>#日本自慢の夏2025をつけて<br>Instagramに写真を投稿</p>
+                            <button tupe="button" class="btn btn-info text-bg-danger">投稿する</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 d-flex">
+                        <!-- <img src="images/stepbox_03.png" alt="" class="img-fluid rounded-4 p-3 bg-white"> -->
+                        <div class="rounded-4 p-4 bg-white">
+                            <img src="images/87.png" alt="DM" class="img-fluid">
+                            <p class="text-start">抽選で合計30名様に<br>スポンサー契約や<br>ご当地旅・ご当地名産を<br>プレゼント★</p>
+                            <p class="text-start">※フォローが外れていると<br>対象外になります</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Prizes">
+            <div class="container container-camp py-5 bg-white">
+                <!-- <h2 class="pb-5 text-center">商品</h2> -->
+                <div class="container container-camp text-center">
+                    <img src="images/Prizes-title.png" alt="賞品紹介">
+                </div>
+            </div>
+            <div class="container container-camp py-5 text-center bg-white">
+                <img src="images/Prizes-img1.png" alt="" class="container container-camp">
+                <p>最優秀賞(3名)<br>「冬のフォト旅」プレゼント<br>2泊3日・宿泊＋撮影ツアー＋体験付き</p>
+                <p>優秀賞(5名)<br>「日本の冬の特産品ギフトセット」</p>
+                <p>特別賞(10名)<br>「ご当地の名産品」</p>
+                <img src="images/Prizes-img2.png" alt="" class="img-fluid">
+            </div>
+        </section>
+
+        <!-- <section id="rule">
+            <div class="container container-camp p-5">
+                <h3 class="fs-4 pb-4">応募資格</h3>
+                    <ul>
+                        <li>日本国内在住の方</li>
+                        <li>この規約に同意された方</li>
+                        <li>当会アカウントをフォローされている方</li>
+                    </ul>
+            </div>
+        </section> -->
+
+        <section id="sns">
+            <div class="container container-camp p-5 bg-white">
+                <p class="fs-6 text-center">Folow Us.</p>
+                <div class="py-5 text-center">
+                    <!-- <i class="fa-brands fa-x-twitter fa-2xl mx-2" style="color: #ff4242;"></i>
+                    <i class="fa-brands fa-facebook fa-2xl mx-2" style="color: #ff4242;"></i>
+                    <i class="fa-brands fa-instagram fa-2xl mx-2" style="color: #ff4242;"></i>
+                    <i class="fa-brands fa-tiktok fa-2xl mx-2" style="color: #ff4242;"></i> -->
+                    <img src="images/logos_youtube.png" alt="" class="mx-3 py-3" height="100"><br>
+                    <img src="images/line-md_twitter-x.png" alt="" class="mx-3" height="80">
+                    <img src="images/skill-icons_instagram.png" alt="" class="mx-3" height="80">
+                    <img src="images/Vector.png" alt="" class="mx-3" height="80">
+                    <img src="images/Tiktok.png" alt="" class="mx-3" height="80">
+                </div>
+            </div>
+        </section>
+
+        <div class="fixed-bottom container container-camp text-end"><!-- ～TOPへ戻るボタン～ -->
+        <a href="#"><img src="images/tophe.png" alt="topへ" height="150"></a>
+    </main>
+    <footer>
+        <div class="text-bg-info text-center py-3">
+            <test>&copy;</test><img src="images/Hananona.Holdings.png" alt="" class="img-fluid w-25">
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<!-- container container-fluid py-3  -->
+  <!-- text-center fs-6 -->

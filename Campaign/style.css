@@ -1,0 +1,43 @@
+/* Shift+Tabで戻る */
+body{
+    font-family:"Noto Sans JP", sans-serif;
+    font-optical-sizing:auto;
+    font-weight:400;
+    font-style:normal;
+    font-size:20px;
+    background:url(images/bg-sora.png)left top fixed;
+    background-size:cover;
+}
+
+
+#countdown {
+      font-size: 2em;
+      color: #ffffff;
+      background: #0428f5;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+.fullscreen-center {
+  display: flex;
+  justify-content: center;  /* 横方向の中央寄せ */
+  align-items: center;      /* 縦方向の中央寄せ */
+}
+   
+h1{
+    font-family: fantasy;
+    font-size:20px;
+    color:#1128fa;
+}
+#hero{
+    padding: 60px;
+}
+
+.container-camp{
+    max-width:960px; 
+}
+
+test{
+ font-size:50px;
+}
